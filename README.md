@@ -112,8 +112,9 @@ Detailed scatter plots show the street-level business distribution in selected c
 
 <img width="1248" height="622" alt="Image" src="https://github.com/user-attachments/assets/d1fbcc14-2051-4d0c-8f4f-e8ce9eef7a4f" />
 
+#### Folium Animation by Star Rating in Las Vegas
 
-#### City-level Geographic Distribution by Business Rating 
+(https://github.com/Feiyingdai/nlp-sna-yelp-analysis/blob/main/folium-1.html)
 
 ### 3.2 User Overview
 - 用户活跃度、精英用户分析、用户评分行为
