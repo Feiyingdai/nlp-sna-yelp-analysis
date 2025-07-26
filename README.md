@@ -65,13 +65,53 @@ This project uses the [Yelp Open Dataset](https://www.yelp.com/dataset), which i
 
 ### 3.1 Business Overview
 
+#### Star Rating distribution
+The majority of Yelp businesses fall within the 3.0 to 4.5 star range, with the highest concentration at 4.0 stars, followed by 3.5 stars and 5.0 stars. This suggests a generally positive sentiment trend among businesses, with relatively few receiving very low ratings.
+
+This distribution aligns with the common observation that users are more likely to leave reviews when they are either highly satisfied or dissatisfied, leading to a polarized rating distribution.
+
 <img width="1025" height="393" alt="Image" src="https://github.com/user-attachments/assets/5425f02f-c2a0-4a41-b278-fd006a0eba74" />
 
-#### Star distribution
 
 #### Top 20 Categories
+Since businesses on Yelp can belong to multiple categories (e.g., "Restaurants; Bars; Nightlife"), we split the categories field by semicolon and retained only the first-listed category to compute the frequency distribution.
 
-#### Geographic distribution by business numbers
+As expected, “Restaurants” dominate the platform with 17,842 listings, far exceeding other categories. This is followed by Shopping and Food, confirming Yelp’s primary focus on food and lifestyle services.
+
+These results give a high-level view of what types of businesses are most prevalent on Yelp, and guide deeper segmentation in future analysis (e.g., sentiment by category).
+
+<img width="1280" height="549" alt="Image" src="https://github.com/user-attachments/assets/317c531e-d382-4d65-85f9-e987884850dd" />
+
+#### Geospatial Mapping
+To analyze business distribution, we visualized geospatial data at multiple levels by using `latitude` and `longitude` from `yelp_business.csv`:
+
+**Global Level**
+
+A 3D globe map illustrates the worldwide distribution of businesses. The majority are concentrated in North America and parts of Europe.
+<img width="486" height="494" alt="Image" src="https://github.com/user-attachments/assets/70bf3a8e-0f6e-40f4-8c29-c942537a5421" />
+
+**District Level**
+
+Heatmaps of North America and Europe show more granular distribution patterns. Dense clusters are visible in U.S. metropolitan areas such as Las Vegas, Phoenix, and Toronto, as well as key European cities like Edinburgh.
+<img width="638" height="500" alt="Image" src="https://github.com/user-attachments/assets/23604ba1-14c1-4bca-8f97-332c353a2523" />
+
+<img width="412" height="501" alt="Image" src="https://github.com/user-attachments/assets/2994073f-773a-4abb-83dd-3e30c2da1370" />
+
+**City Level**
+
+The bar chart above displays the top 20 cities with the highest number of businesses in the Yelp dataset.
+Given the significantly high business density in Las Vegas, Phoenix, and Toronto, and the presence of Edinburgh among the top 20, we selected these four cities—Las Vegas, Phoenix, Toronto, and Edinburgh—for more detailed city-level geospatial analysis to better understand business clustering and urban patterns.
+
+<img width="1355" height="464" alt="image" src="https://github.com/user-attachments/assets/97f5c351-18a1-4c12-bd8a-ce34aafae74b" />
+
+
+Detailed scatter plots show the street-level business distribution in selected cities:
+- Las Vegas & Phoenix: Businesses are densely packed along main streets and exhibit a clear grid pattern.
+- Toronto & Edinburgh: The layouts reflect local geography and urban planning, with Toronto showing linear concentration along main avenues and Edinburgh having a more organic spread.
+<img width="1242" height="616" alt="Image" src="https://github.com/user-attachments/assets/fa44c2b8-9847-4a7f-ab39-69e42a155028" />
+
+<img width="1248" height="622" alt="Image" src="https://github.com/user-attachments/assets/d1fbcc14-2051-4d0c-8f4f-e8ce9eef7a4f" />
+
 
 #### City-level Geographic Distribution by Business Rating 
 
