@@ -13,16 +13,16 @@ This project presents a comprehensive analysis of the Yelp Open Dataset by integ
 ### 1.2 Techniques Used
 This project leverages a diverse set of analytical techniques across different domains:
 
-### Data Wrangling & Exploratory Data Analysis (EDA)
+#### Data Wrangling & Exploratory Data Analysis (EDA)
 - Merged and filtered multiple datasets (`business`, `review`, `user`) from the Yelp Open Dataset  
 - Performed statistical profiling, aggregation, and exploratory visualizations
 
-### Geospatial Mapping
+#### Geospatial Mapping
 - Used **Folium** and **Plotly** to visualize:
   - Geographic distribution of businesses  
   - Movement patterns of highly active users across business locations  
 
-### Natural Language Processing (NLP)
+#### Natural Language Processing (NLP)
 - Conducted sentiment analysis using:
   - **AFINN Lexicon**  
   - **VADER Sentiment Analyzer** (for social media-style text) 
@@ -30,17 +30,17 @@ This project leverages a diverse set of analytical techniques across different d
   - Word frequency and bigrams  
   - Sentiment-specific word clouds  
 
-### Social Network Analysis (SNA)
+#### Social Network Analysis (SNA)
 - Constructed **user-user friendship graphs** using `networkx`  
 - Computed **degree centrality** to identify top influencers  
 - Visualized ego networks and overall network topology  
 
-### Community Detection
+#### Community Detection
 - Applied the **Louvain algorithm** to detect tightly-knit user communities  
 - Measured **modularity score** to evaluate community structure strength  
 - Visualized communities using layout optimization and color-coded nodes  
 
-### Visualization & Reporting
+#### Visualization & Reporting
 - Created interactive dashboards using **Tableau** and **Python-based plots**  
 - Generated:
   - Network plots  
@@ -61,11 +61,19 @@ This project uses the [Yelp Open Dataset](https://www.yelp.com/dataset), which i
 | `yelp_user`           | 1,326,100     | user_id, name, review_count, yelping_since, friends, elite (years), fans, Feedback counts (useful, funny, cool)|
 
 
-
-
 ## 3. Exploratory Data Analysis (EDA)
+
 ### 3.1 Business Overview
-- 商户类型、位置分布、评分等基础统计分析
+
+<img width="1025" height="393" alt="Image" src="https://github.com/user-attachments/assets/5425f02f-c2a0-4a41-b278-fd006a0eba74" />
+
+#### Star distribution
+
+#### Top 20 Categories
+
+#### Geographic distribution by business numbers
+
+#### City-level Geographic Distribution by Business Rating 
 
 ### 3.2 User Overview
 - 用户活跃度、精英用户分析、用户评分行为
