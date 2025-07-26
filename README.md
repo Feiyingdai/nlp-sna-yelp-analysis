@@ -3,11 +3,13 @@
 This project presents a comprehensive analysis of the Yelp Open Dataset by integrating multiple perspectives — **textual**, **relational**, and **geospatial**. It combines **Natural Language Processing (NLP)**, **Social Network Analysis (SNA)**, and **Geospatial Visualization** to uncover insights from user reviews, social connections, and physical locations.
 
 ## 1. Project Overview
+
 ### 1.1 Key Objectives
 - Understand **business characteristics**, **user behavior**, and **review sentiment** across cities
 - Visualize **spatial distributions** of businesses and **highly active users’ movement patterns**
 - Detect **user communities** and **influencers** using network structure
 - Identify **key themes and sentiments** in positive and negative reviews
+
 ### 1.2 Techniques Used
 This project leverages a diverse set of analytical techniques across different domains:
 
@@ -47,7 +49,19 @@ This project leverages a diverse set of analytical techniques across different d
 
 
 ## 2. Dataset Overview
-描述数据来源（如 Yelp Open Dataset）、数据量级、主要字段。
+This project uses the [Yelp Open Dataset](https://www.yelp.com/dataset), which includes six interrelated tables covering businesses, users, reviews, and activity logs. Below is a summary of each dataset and its key columns:
+
+| Dataset               | # Records     | Key Columns                                                           |
+|-----------------------|---------------|-----------------------------------------------------------------------------------------------------------------------|
+| `yelp_business`       | 174,567       | business_id, name, address, city, state, postal_code, latitude, longitude, stars, review_count, is_open, categories   |
+| `yelp_business_hours` | 174,567       | Weekly opening hours for each business (Mon–Sun)                            |
+| `yelp_checkin`        | 146,350       | business_id, hour, weekday, checkins                                                                                  |
+| `yelp_review`         | 5,261,668     | review_id, user_id, business_id, stars, date, text, useful, funny, cool (feedback from other users)                   |
+| `yelp_tip`            | 1,098,324     | text, date, likes, user_id, business_id                          |
+| `yelp_user`           | 1,326,100     | user_id, name, review_count, yelping_since, friends, elite (years), fans, Feedback counts (useful, funny, cool)|
+
+
+
 
 ## 3. Exploratory Data Analysis (EDA)
 ### 3.1 Business Overview
