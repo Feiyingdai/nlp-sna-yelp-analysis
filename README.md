@@ -9,6 +9,41 @@ This project presents a comprehensive analysis of the Yelp Open Dataset by integ
 - Detect **user communities** and **influencers** using network structure
 - Identify **key themes and sentiments** in positive and negative reviews
 ### 1.2 Techniques Used
+This project leverages a diverse set of analytical techniques across different domains:
+
+### Data Wrangling & Exploratory Data Analysis (EDA)
+- Merged and filtered multiple datasets (`business`, `review`, `user`) from the Yelp Open Dataset  
+- Performed statistical profiling, aggregation, and exploratory visualizations
+
+### Geospatial Mapping
+- Used **Folium** and **Plotly** to visualize:
+  - Geographic distribution of businesses  
+  - Movement patterns of highly active users across business locations  
+
+### Natural Language Processing (NLP)
+- Conducted sentiment analysis using:
+  - **AFINN Lexicon**  
+  - **VADER Sentiment Analyzer** (for social media-style text) 
+- Extracted:
+  - Word frequency and bigrams  
+  - Sentiment-specific word clouds  
+
+### Social Network Analysis (SNA)
+- Constructed **user-user friendship graphs** using `networkx`  
+- Computed **degree centrality** to identify top influencers  
+- Visualized ego networks and overall network topology  
+
+### Community Detection
+- Applied the **Louvain algorithm** to detect tightly-knit user communities  
+- Measured **modularity score** to evaluate community structure strength  
+- Visualized communities using layout optimization and color-coded nodes  
+
+### Visualization & Reporting
+- Created interactive dashboards using **Tableau** and **Python-based plots**  
+- Generated:
+  - Network plots  
+  - Geospatial heatmaps  
+  - Sentiment distribution and trend charts
 
 
 ## 2. Dataset Overview
