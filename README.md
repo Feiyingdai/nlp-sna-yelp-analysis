@@ -193,14 +193,95 @@ Number of reviews decreases — like useful reviews, funny reviews may require m
 - 使用 Tableau 构建的交互式可视化仪表盘
 
 ## 4. Sentiment Analysis
-### 4.1 Sentiment by User Groups
-- 比较不同用户群体（如精英 vs 非精英）的评论情绪
 
-### 4.2 Word Clouds of Positive and Negative Reviews
-- 分析积极与消极评论中的关键词与词云
+### 4.1 Sentiment Analysis by User Groups
 
-### 4.3 Key Business Sentiment Deep Dive
-- 对重点商户的评论进行情绪趋势追踪和分析（如时间变化、词频变化）
+We applied TextBlob to evaluate sentiment scores of Yelp reviews in 2012, comparing **Elite Users** and **Regular Users**.
+
+- The histogram shows that Elite Users' sentiment scores are more concentrated around **0.25**, indicating consistently positive reviews.
+- In contrast, Regular Users display a wider sentiment range, with a longer tail on the negative side.
+- **Conclusion**: Elite Users tend to provide more stable and constructive feedback, possibly due to higher engagement or platform experience.
+  
+<img width="1401" height="883" alt="image" src="https://github.com/user-attachments/assets/1035eb2f-8046-4037-b155-2916e9ce27cb" />
+
+
+### 4.2 Word Clouds for Positive and Negative Reviews
+
+We randomly sampled 10,000 reviews and segmented them based on sentiment score:
+- **Positive**: `sentiment > 0.3`
+- **Negative**: `sentiment < -0.3`
+
+Then, we visualized the top 100 most frequent words in each group using word clouds.
+
+- **Positive words**: `great`, `place`, `service`, `food`, `love`, `delicious`, etc., highlighting praise for food and experience.
+- **Negative words**: `worst`, `terrible`, `rude`, `bad`, `wait`, `awful`, etc., reflecting frustration about service or long wait times.
+
+These visualizations reveal that **positive feedback is mostly food-related**, while **negative reviews focus on customer service or delays**.
+
+<img width="1467" height="455" alt="image" src="https://github.com/user-attachments/assets/75e89f79-8045-4419-91e6-c8093d3b1ad6" />
+
+
+
+### 4.3 Sentiment Analysis on a Top-Rated Business
+
+We selected one of the most-reviewed and highest-rated restaurants on Yelp (e.g., Business ID: `eLFfWcdb7VkqNyTONksHiQ`) for a deeper sentiment analysis using **NLTK**, **VADER**, and **AFINN**.
+
+#### 4.3.1 Top Keywords and Word Cloud
+
+- Using NLTK, we extracted frequent terms from the reviews.
+- The resulting word cloud includes terms like `korean`, `bbq`, `food`, `server`, `service`, `great`, and `place`, suggesting that food quality and service are central themes in the reviews.
+
+<img width="1378" height="689" alt="image" src="https://github.com/user-attachments/assets/35434d29-6079-48e4-8018-14ac3c9c46ef" />
+
+
+#### 4.3.2 VADER + AFINN Sentiment Contribution
+
+**Methodology**:
+1. VADER was used to label each sentence in the reviews as positive or negative.
+2. We extracted **positive words** from positive reviews and **negative words** from negative reviews.
+3. Sentiment contribution was calculated as:  
+   **`Sentiment Contribution = Word Frequency × Sentiment Score (from AFINN)`**
+
+**Benefits**:
+- This method captures both **sentiment direction** and **intensity**, offering a more nuanced evaluation.
+
+<img width="733" height="893" alt="image" src="https://github.com/user-attachments/assets/90cf599a-8324-44b0-862e-7918d36ba6f1" />
+
+<img width="1453" height="408" alt="image" src="https://github.com/user-attachments/assets/61d3485c-f1fe-486c-89bd-cd4b64bbdeb2" />
+
+
+**Key Insights**:
+- Top positive words: `great`, `good`, `awesome`, `love`, `recommend`, `amazing`
+- Top negative words: `bad`, `terrible`, `poor`, `disappointed`, `awful`, `horrible`
+
+Both bar plots and word clouds help visualize how each term contributes to overall sentiment.
+
+#### 4.3.3 Bigram Co-occurrence Network
+
+We built a **bigram network** using NLTK and NetworkX by:
+- Extracting word pairs (bigrams) appearing more than 50 times
+- Filtering and visualizing networks around key keywords such as `pork`, `service`, and `bbq`
+
+<img width="1371" height="689" alt="image" src="https://github.com/user-attachments/assets/c8ff8046-b4c4-48a1-a293-33e257867f7c" />
+<img width="1357" height="688" alt="image" src="https://github.com/user-attachments/assets/b600bdc7-7c5d-4731-8477-5cb07130cfd5" />
+<img width="1342" height="677" alt="image" src="https://github.com/user-attachments/assets/863b6272-6d79-49a4-92af-602f6b2d6ac8" />
+<img width="1384" height="663" alt="image" src="https://github.com/user-attachments/assets/c824a040-ea63-4c0b-ab2e-6b576a10a10d" />
+
+
+**Examples**:
+- `pork`: co-occurs with `belly`, `spicy`, `garlic`, `bulgogi`
+- `service`: co-occurs with `great`, `customer`, `excellent`, `slow`, `fast`
+- `bbq`: co-occurs with `korean`, `place`, `restaurant`, `gen`
+
+**Value**:
+- Bigram analysis preserves **semantic context**, enabling businesses to pinpoint recurring experiences like:
+  - "great service"
+  - "pork belly"
+  - "korean bbq"
+- These insights are useful for **customer experience optimization** and **marketing strategy**.
+
+
+
 
 ## 5. Social Network Analysis (SNA)
 ### 5.1 User Friendship Network
