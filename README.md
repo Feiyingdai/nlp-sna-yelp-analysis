@@ -114,7 +114,7 @@ Detailed scatter plots show the street-level business distribution in selected c
 
 #### Folium Animation by Star Rating in Las Vegas
 
-()
+(https://feiyingdai.github.io/nlp-sna-yelp-analysis/folium-2.html)
 
 ### 3.2 User Overview
 To understand user engagement and the impact of Yelp’s elite user program, we analyze both **active users** and **elite users**:
