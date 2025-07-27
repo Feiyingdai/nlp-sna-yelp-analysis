@@ -199,9 +199,9 @@ Number of reviews decreases — like useful reviews, funny reviews may require m
 
 <img width="1472" height="414" alt="image" src="https://github.com/user-attachments/assets/ac60a3aa-b097-4d3f-8b17-17a84caca233" />
 
+### 3.4 Interactive Dashboard  
+**[Click here to explore the dashboard](https://public.tableau.com/views/YelpDatasetsAnalysis/Story?:language=zh-CN&:display_count=n&:origin=viz_share_link)**
 
-### 3.4 Interactive Dashboard
-- 使用 Tableau 构建的交互式可视化仪表盘
 
 ## 4. Sentiment Analysis
 
