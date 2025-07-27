@@ -156,7 +156,38 @@ To understand user engagement and the impact of Yelp’s elite user program, we 
 
 
 ### 3.3 Review Overview
-- 评论数量、情感分布、时间趋势
+We randomly sampled 100,000 reviews to explore patterns in user review behavior. The analysis yielded the following key insights:
+
+#### Review Frequency
+Most users are infrequent reviewers.
+As shown in the left plot, the distribution of reviews per user is highly right-skewed.
+Over 80% of users wrote only 1 review, indicating that the majority of Yelp users are one-time contributors.
+The cumulative distribution (right plot) confirms this, with nearly all users having submitted fewer than 5 reviews.
+
+<img width="1280" height="594" alt="image" src="https://github.com/user-attachments/assets/90544e43-4eae-426b-895e-04ce80d0452f" />
+
+
+#### Review Usefulness
+
+We analyzed how the number of "useful" votes a user receives correlates with their behavior:
+
+Higher usefulness correlates with:
+Lower ratings (both average and max) — perhaps due to more critical and detailed reviews being perceived as helpful.
+Longer review length — reviewers with higher useful counts tend to write more in-depth feedback.
+Fewer reviews overall — suggesting that more thoughtful reviewers post less frequently but contribute higher-value content.
+
+<img width="1462" height="375" alt="image" src="https://github.com/user-attachments/assets/a2a8cd74-016b-44cb-a2d4-5d473df6181f" />
+
+#### Review Funny 
+
+We also examined patterns among users who receive more "funny" votes:
+
+Maximum and average ratings tend to decrease as funny votes increase — these reviews may include humorous critiques.
+Review length increases — funny reviews also tend to be longer.
+Number of reviews decreases — like useful reviews, funny reviews may require more effort and creativity, thus less frequent.
+
+<img width="1472" height="414" alt="image" src="https://github.com/user-attachments/assets/ac60a3aa-b097-4d3f-8b17-17a84caca233" />
+
 
 ### 3.4 Interactive Dashboard
 - 使用 Tableau 构建的交互式可视化仪表盘
