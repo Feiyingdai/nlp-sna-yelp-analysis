@@ -182,6 +182,17 @@ To understand user engagement and the impact of Yelp’s elite user program, we 
 | **Cool Rate**      | 1.63        | 0.21            |
 
 
+#### 3.2.4 Most Engaged User Behavior Stalking
+
+This Yelp elite user, identified as CxDOIDnH8gp9KXzpBHJYXw, exhibits a highly active and exploratory dining pattern across different locations in Toronto, Canada, over an extended period.
+
+**Insights:** 
+
+- Consistent Activity: The user frequently writes reviews across multiple dates, indicating she is an active Yelp participant—not just passively rating places, but likely exploring a wide variety of restaurants and establishments.
+- Geographic Range: While the heatmap is particularly around the Greater Toronto Area, the user travels across several neighborhoods and cities, showing a diverse geographic footprint. This suggests she may enjoy trying new places rather than frequenting just a few favorites and have a lifestyle or profession that involves commuting or traveling.
+
+- Potential Influencer: Given the number and spread of her reviews, she likely has high visibility within the Yelp ecosystem, and her reviews might influence business visibility and reputation.
+
 ### 3.3 Review Overview
 We randomly sampled 100,000 reviews to explore patterns in user review behavior. The analysis yielded the following key insights:
 
