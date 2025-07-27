@@ -1,6 +1,8 @@
-# Yelp Datasets Analysis: Using Sentiment & Social Networks Analysis
+# 🤖 Yelp Datasets Analysis: Using Sentiment & Social Networks Analysis
 
 This project presents a comprehensive analysis of the Yelp Open Dataset by integrating multiple perspectives — **textual**, **relational**, and **geospatial**. It combines **Natural Language Processing (NLP)**, **Social Network Analysis (SNA)**, and **Geospatial Visualization** to uncover insights from user reviews, social connections, and physical locations.
+<img width="445" height="209" alt="image" src="https://github.com/user-attachments/assets/c4ad8ccd-4698-4549-8d4c-dd04d9b564e5" />
+
 
 ## 1. Project Overview
 
@@ -183,15 +185,17 @@ To understand user engagement and the impact of Yelp’s elite user program, we 
 
 
 #### 3.2.4 Most Engaged User Behavior Stalking
+To stalk the most engaged user's behavior, we also used Folium's `HeatMapWithTime` plugin to create an interactive time-lapse heatmap.
+This Yelp elite user, identified as **CxDOIDnH8gp9KXzpBHJYXw**, exhibits a **highly active and exploratory dining pattern** across different locations in **Toronto, Canada**, over an extended period.
 
-This Yelp elite user, identified as CxDOIDnH8gp9KXzpBHJYXw, exhibits a highly active and exploratory dining pattern across different locations in Toronto, Canada, over an extended period.
+**Key Insights:** 
 
-**Insights:** 
+- **Consistent Activity**: The user frequently writes reviews across multiple dates, indicating she is an active Yelp participant—not just passively rating places, but likely exploring a wide variety of restaurants and establishments.
+- **Geographic Range**: While the heatmap is particularly around the Greater Toronto Area, the user travels across several neighborhoods and cities, showing a diverse geographic footprint. This suggests she may enjoy trying new places rather than frequenting just a few favorites and have a lifestyle or profession that involves commuting or traveling.
+- **Potential Influencer**: Given the number and spread of her reviews, she likely has high visibility within the Yelp ecosystem, and her reviews might influence business visibility and reputation.
 
-- Consistent Activity: The user frequently writes reviews across multiple dates, indicating she is an active Yelp participant—not just passively rating places, but likely exploring a wide variety of restaurants and establishments.
-- Geographic Range: While the heatmap is particularly around the Greater Toronto Area, the user travels across several neighborhoods and cities, showing a diverse geographic footprint. This suggests she may enjoy trying new places rather than frequenting just a few favorites and have a lifestyle or profession that involves commuting or traveling.
+**[Click here to explore the interactive heatmap visualization](https://feiyingdai.github.io/nlp-sna-yelp-analysis/folium-3.html)**
 
-- Potential Influencer: Given the number and spread of her reviews, she likely has high visibility within the Yelp ecosystem, and her reviews might influence business visibility and reputation.
 
 ### 3.3 Review Overview
 We randomly sampled 100,000 reviews to explore patterns in user review behavior. The analysis yielded the following key insights:
