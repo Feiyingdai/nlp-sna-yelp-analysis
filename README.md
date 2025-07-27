@@ -194,6 +194,18 @@ Number of reviews decreases — like useful reviews, funny reviews may require m
 
 ## 4. Sentiment Analysis
 
+To better understand customer experiences and feedback patterns on Yelp, we conducted a multi-faceted sentiment analysis on user-generated reviews. This section explores both the emotional tone and lexical content of reviews, using multiple techniques including **TextBlob, VADER, AFINN, and bigram networks**.
+
+**Key goals include**:
+
+- Comparing sentiment distributions between elite and regular users to detect behavioral or attitudinal differences.
+- Visualizing lexical patterns through word clouds to understand the most common themes in positive and negative reviews.
+- Identifying key sentiment drivers and influential expressions using sentiment lexicons and weighted contribution scores.
+- Extracting high-frequency bigram collocations to preserve context and inform business optimization strategies.
+
+This analysis helps reveal how users feel about their experiences, what they tend to praise or criticize, and how sentiment patterns can differ across user types or high-profile businesses.
+
+
 ### 4.1 Sentiment Analysis by User Groups
 
 We applied TextBlob to evaluate sentiment scores of Yelp reviews in 2012, comparing **Elite Users** and **Regular Users**.
@@ -288,7 +300,7 @@ This section explores the user interaction network in Stuttgart, constructed fro
 
 ### 5.1 Network Structure Analysis
 
-#### 5.1.1 Graph Density
+#### 5.1.1 Graph Density: 0.0569
 
 - The network density is **0.0569**, which indicates a sparse network where most users are not directly connected.
 - This suggests that:
@@ -300,7 +312,7 @@ If Yelp aims to boost user retention and engagement, it could explore features t
 - Friend recommendations
 - Local user groups or events
 
-#### 5.1.2 Average Degree
+#### 5.1.2 Average Degree: 15.65
 
 - The average degree is **15.65**, meaning each user (in the influencer subgraph) is connected to ~15 others.
 - This reflects **highly active social users**, likely frequent reviewers or community leaders.
@@ -325,7 +337,7 @@ These individuals can serve as **word-of-mouth influencers**. Yelp may consider:
 
 <img width="1137" height="826" alt="image" src="https://github.com/user-attachments/assets/62ae97de-dc9e-4770-a86c-e2d638f11d1a" />
 
-#### Top 10 Influencers by Degree Centrality
+#### 5.1.4 Top 10 Influencers by Degree Centrality
 These users have the highest number of connections in the Stuttgart user network and are likely to have strong influence across multiple communities.
 
 | Rank | User ID                          | Number of Connections |
@@ -346,19 +358,19 @@ These users have the highest number of connections in the Stuttgart user network
 
 We applied the Louvain algorithm to detect community structures in the graph.
 
-1. **Detected 7 Communities**
+#### 5.2.1 Detected 7 Communities
    - Indicates clear social clustering among Yelp users
    - Clusters may form based on:
      - Geographic proximity
      - Shared interests
      - Favorite types of businesses
 
-2. **Balanced Community Size**
+#### 5.2.2 Balanced Community Size
    - Largest community: 62 users (~22.5%)
    - Smallest community: 30 users (~10.9%)
    - The network exhibits a **multi-centered structure** with no dominant group
 
-3. **Modularity Score: 0.255**
+#### 5.2.3 Modularity Score: 0.255
    - Indicates a **moderate level of community structure**
    - While not highly modular (> 0.4 is considered strong), it still reflects meaningful social divisions
 
@@ -368,8 +380,43 @@ Community detection results can help Yelp:
 - Understand regional or niche-based user behavior
 - Design localized promotions and campaigns
 
+<img width="1254" height="830" alt="image" src="https://github.com/user-attachments/assets/0a552637-fc2c-45d9-b298-000c0281e9ec" />
+
+
 ## 6. Strategic Insights
-结合情绪分析与社交网络，提出潜在商业建议，如：
-- 精英用户的影响力
-- 高情绪分社区
-- 商户定位优化
+
+Based on the sentiment analysis and social network modeling conducted in this study, we provide the following strategic recommendations for Yelp and local businesses:
+
+### 6.1 For Yelp Platform Strategy
+
+- **Enhance User Retention through Social Engagement**
+  - The social network shows low graph density (0.0569), indicating most users are isolated and not connected with friends. This suggests Yelp is currently driven more by content consumption (e.g., reading/writing reviews) than social interaction.
+  - **Recommendation**: Encourage social features like friend recommendations, user groups, and community events to increase user retention and app stickiness.
+
+- **Empower Influencers and Active Users**
+  - Users with high degree centrality (e.g., 70+ connections) represent key influencers. These users are socially active and likely to contribute high-quality content.
+  - **Recommendation**: Launch targeted programs (e.g., Elite invitations, exclusive events, reward systems) to retain and activate these high-value users.
+
+- **Leverage Community Detection for Personalization**
+  - Louvain community detection revealed 7 relatively balanced user clusters. These can be treated as social/interest groups.
+  - **Recommendation**: Tailor review recommendations and push notifications based on users' community affiliations and common preferences.
+
+### 6.2 For Business Owners (e.g., Restaurants)
+
+- **Optimize Based on Sentiment Feedback**
+  - Both elite and regular users show a tendency toward positive sentiment, but elite users express opinions in a more centered, consistent tone.
+  - **Recommendation**: Monitor elite user reviews closely, as they may set the tone for wider perception.
+
+- **Prioritize Service Quality**
+  - Word clouds and VADER+AFINN analysis show that *"service"*, *"staff"*, and *"server"* are key sentiment drivers—both positively (e.g., “friendly”, “excellent”) and negatively (e.g., “rude”, “slow”).
+  - **Recommendation**: Invest in staff training and consistency of service experience.
+
+- **Track Keyword & Bigram Trends**
+  - Bigram networks (e.g., “korean bbq”, “great service”, “pork belly”) provide granular insight into what customers value or complain about.
+  - **Recommendation**: Use bigram trends to monitor buzzwords and customer expectations in real time. Adjust marketing, menu items, or operations accordingly.
+
+- **Use Influencer Nodes for Brand Promotion**
+  - Influential users identified from network analysis can be invited for promotions, soft launches, or review campaigns.
+  - **Recommendation**: Engage top Yelp users to create organic buzz and reach within their communities.
+
+
