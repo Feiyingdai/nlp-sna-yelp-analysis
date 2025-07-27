@@ -112,7 +112,18 @@ Detailed scatter plots show the street-level business distribution in selected c
 
 <img width="1248" height="622" alt="Image" src="https://github.com/user-attachments/assets/d1fbcc14-2051-4d0c-8f4f-e8ce9eef7a4f" />
 
-#### Folium Animation by Star Rating in Las Vegas
+#### Heatmap by Star Rating in Las Vegas (Folium)
+
+To investigate whether business star ratings are geographically clustered in Las Vegas, we used Folium's `HeatMapWithTime` plugin to create an interactive time-lapse heatmap.
+
+Businesses were grouped by their star ratings (from 1.0 to 5.0 in 0.5 increments), and the geographic coordinates (latitude and longitude) of each group were extracted. The resulting animated heatmap illustrates how the spatial distribution of businesses changes with star ratings, allowing us to explore potential spatial patterns or hotspots associated with highly rated or poorly rated establishments.
+
+**Key Insights:**
+
+- High- and low-rated businesses are generally intermixed across the city, with no strong evidence of rating-based geographic clustering.
+- Central Las Vegas (e.g., The Strip) shows high density across all rating levels, likely due to heavy tourist activity and a dynamic business environment.
+- Peripheral areas are more sparsely populated but not dominated by low-rated businesses, suggesting that star ratings are not primarily driven by geographic location.
+
 
 (https://feiyingdai.github.io/nlp-sna-yelp-analysis/folium-2.html)
 
