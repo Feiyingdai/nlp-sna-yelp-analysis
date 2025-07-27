@@ -134,9 +134,9 @@ This heatmap illustrates the aggregated check-in volume across different hours o
 
 **Key insights:**
 
-- Peak activity occurs during evening hours (18:00–22:00), especially on Fridays and Saturdays, suggesting higher foot traffic during weekends and nightlife hours.
-- Early morning hours (6:00–10:00) across all days show minimal check-in volume, reflecting lower user activity during that period.
-- Weekends (Saturday and Sunday) have the highest total check-in counts, while Tuesdays and Wednesdays tend to be the least active.
+- **Peak activity occurs during evening hours (18:00–22:00)**, especially on Fridays and Saturdays, suggesting higher foot traffic during weekends and nightlife hours.
+- **Early morning hours (6:00–10:00)** across all days show **minimal check-in volume**, reflecting lower user activity during that period.
+- **Weekends (Saturday and Sunday) have the highest total check-in counts**, while Tuesdays and Wednesdays tend to be the least active.
 
 This temporal pattern provides valuable guidance for business staffing, promotion timing, and operational planning, especially for service-oriented businesses like restaurants, cafes, and entertainment venues.
 
