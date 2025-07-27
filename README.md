@@ -114,10 +114,46 @@ Detailed scatter plots show the street-level business distribution in selected c
 
 #### Folium Animation by Star Rating in Las Vegas
 
-(https://github.com/Feiyingdai/nlp-sna-yelp-analysis/blob/main/folium-1.html)
+()
 
 ### 3.2 User Overview
-- 用户活跃度、精英用户分析、用户评分行为
+To understand user engagement and the impact of Yelp’s elite user program, we analyze both **active users** and **elite users**:
+
+- **Active users** are defined as users who have posted at least one review, based on the `reviews` table (`user_id` appearing in reviews).
+- **Elite users** are identified from the `user` table's `elite` column, where we split multi-year values to determine elite status by year.
+
+#### Active vs Elite Users by Year
+- From 2004 to 2017, both active and elite user counts increased significantly.
+- Active users grew exponentially, reaching over **450,000** by 2017.
+- Elite users increased steadily, but much more selectively — around **35,000** by 2017.
+- This highlights that Yelp has scaled its user base while keeping the elite program exclusive.
+
+<img width="1214" height="581" alt="image" src="https://github.com/user-attachments/assets/7eab642a-0370-4b94-871e-19390896d3e9" />
+
+#### Year-over-Year Retention Rate
+- **Elite users** consistently show high retention rates (>80%), indicating strong platform loyalty.
+- **All users** display a much lower retention rate (~30%), suggesting that most users are casual participants.
+- This gap underscores the importance of elite users in sustaining high-quality, ongoing engagement.
+
+<img width="1188" height="580" alt="image" src="https://github.com/user-attachments/assets/f5e514f3-cc84-4c59-a62a-dd9563e6e67a" />
+
+
+#### Elite vs Non-Elite User Behavior Comparison
+
+- **Elite users** are far more active and socially recognized:
+  - They contribute **many more reviews** and attract **significantly more fans**.
+  - Their reviews receive higher levels of **useful**, **funny**, and **cool** feedback.
+- These stats confirm the **higher quality and influence** of elite contributors on the platform.
+
+| Metric         | Elite Users | Non-Elite Users |
+|----------------|-------------|-----------------|
+| **Avg Stars**      | 3.85        | 3.70            |
+| **Avg Fans**       | 21.94       | 0.47            |
+| **Avg Reviews**    | 226.88      | 13.32           |
+| **Useful Rate**    | 2.10        | 0.59            |
+| **Funny Rate**     | 1.14        | 0.21            |
+| **Cool Rate**      | 1.63        | 0.21            |
+
 
 ### 3.3 Review Overview
 - 评论数量、情感分布、时间趋势
