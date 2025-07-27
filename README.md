@@ -127,6 +127,22 @@ Businesses were grouped by their star ratings (from 1.0 to 5.0 in 0.5 increments
 
 **[Click here to explore the interactive heatmap visualization](https://feiyingdai.github.io/nlp-sna-yelp-analysis/folium-2.html)**
 
+
+#### 3.1.5 Business Checkin Time Heatmap
+
+This heatmap illustrates the aggregated check-in volume across different hours of the day and days of the week on Yelp businesses. Each cell represents the intensity of user check-ins at a specific hour on a given weekday, with darker shades indicating higher activity.
+
+**Key insights:**
+
+- Peak activity occurs during evening hours (18:00–22:00), especially on Fridays and Saturdays, suggesting higher foot traffic during weekends and nightlife hours.
+- Early morning hours (6:00–10:00) across all days show minimal check-in volume, reflecting lower user activity during that period.
+- Weekends (Saturday and Sunday) have the highest total check-in counts, while Tuesdays and Wednesdays tend to be the least active.
+
+This temporal pattern provides valuable guidance for business staffing, promotion timing, and operational planning, especially for service-oriented businesses like restaurants, cafes, and entertainment venues.
+
+<img width="1337" height="875" alt="image" src="https://github.com/user-attachments/assets/652828a4-90f8-4ca3-b398-f3163c037714" />
+
+
 ### 3.2 User Overview
 To understand user engagement and the impact of Yelp’s elite user program, we analyze both **active users** and **elite users**:
 
@@ -200,6 +216,26 @@ Number of reviews decreases — like useful reviews, funny reviews may require m
 <img width="1472" height="414" alt="image" src="https://github.com/user-attachments/assets/ac60a3aa-b097-4d3f-8b17-17a84caca233" />
 
 ### 3.4 Interactive Dashboard  
+
+To facilitate an intuitive exploration of Yelp's multifaceted dataset, we designed an interactive dashboard using Tableau Public. This dashboard offers a visual summary of key analytical themes across three perspectives: businesses, users, and reviews. Each section highlights insights drawn from geospatial patterns, user behavior, and review content, providing a comprehensive lens into Yelp's ecosystem.
+
+**Key exploration areas include:**
+
+**Business**
+- Geographic distribution of businesses and their star ratings
+- Performance patterns based on business attributes
+
+**Users**
+- Growth and trends in user engagement and average ratings over time
+- Behavioral patterns of elite vs. non-elite users
+
+**Reviews**
+- Relationship between review styles (e.g., length, sentiment) and star ratings
+
+The dashboard enables dynamic filtering and drill-down, allowing users to uncover patterns and generate insights interactively.
+
+
+
 **[Click here to explore the dashboard](https://public.tableau.com/views/YelpDatasetsAnalysis/Story?:language=zh-CN&:display_count=n&:origin=viz_share_link)**
 
 
