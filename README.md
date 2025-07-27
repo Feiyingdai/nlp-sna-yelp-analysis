@@ -1,4 +1,4 @@
-# Yelp Datasets Analysis: Using Sentimental & Social Networks Analysis
+# Yelp Datasets Analysis: Using Sentiment & Social Networks Analysis
 
 This project presents a comprehensive analysis of the Yelp Open Dataset by integrating multiple perspectives — **textual**, **relational**, and **geospatial**. It combines **Natural Language Processing (NLP)**, **Social Network Analysis (SNA)**, and **Geospatial Visualization** to uncover insights from user reviews, social connections, and physical locations.
 
