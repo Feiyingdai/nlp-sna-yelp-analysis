@@ -65,7 +65,7 @@ This project uses the [Yelp Open Dataset](https://www.yelp.com/dataset), which i
 
 ### 3.1 Business Overview
 
-#### Star Rating distribution
+#### 3.1.1 Star Rating distribution
 The majority of Yelp businesses fall within the 3.0 to 4.5 star range, with the highest concentration at 4.0 stars, followed by 3.5 stars and 5.0 stars. This suggests a generally positive sentiment trend among businesses, with relatively few receiving very low ratings.
 
 This distribution aligns with the common observation that users are more likely to leave reviews when they are either highly satisfied or dissatisfied, leading to a polarized rating distribution.
@@ -73,7 +73,7 @@ This distribution aligns with the common observation that users are more likely 
 <img width="1025" height="393" alt="Image" src="https://github.com/user-attachments/assets/5425f02f-c2a0-4a41-b278-fd006a0eba74" />
 
 
-#### Top 20 Categories
+#### 3.1.2 Top 20 Categories
 Since businesses on Yelp can belong to multiple categories (e.g., "Restaurants; Bars; Nightlife"), we split the categories field by semicolon and retained only the first-listed category to compute the frequency distribution.
 
 As expected, “Restaurants” dominate the platform with 17,842 listings, far exceeding other categories. This is followed by Shopping and Food, confirming Yelp’s primary focus on food and lifestyle services.
@@ -82,7 +82,7 @@ These results give a high-level view of what types of businesses are most preval
 
 <img width="1280" height="549" alt="Image" src="https://github.com/user-attachments/assets/317c531e-d382-4d65-85f9-e987884850dd" />
 
-#### Geospatial Mapping
+#### 3.1.3 Geospatial Mapping
 To analyze business distribution, we visualized geospatial data at multiple levels by using `latitude` and `longitude` from `yelp_business.csv`:
 
 **Global Level**
@@ -112,7 +112,7 @@ Detailed scatter plots show the street-level business distribution in selected c
 
 <img width="1248" height="622" alt="Image" src="https://github.com/user-attachments/assets/d1fbcc14-2051-4d0c-8f4f-e8ce9eef7a4f" />
 
-#### Heatmap by Star Rating in Las Vegas (Folium)
+#### 3.1.4 Heatmap by Star Rating in Las Vegas (Folium)
 
 To investigate whether business star ratings are geographically clustered in Las Vegas, we used Folium's `HeatMapWithTime` plugin to create an interactive time-lapse heatmap.
 
@@ -125,7 +125,7 @@ Businesses were grouped by their star ratings (from 1.0 to 5.0 in 0.5 increments
 - Peripheral areas are more sparsely populated but not dominated by low-rated businesses, suggesting that star ratings are not primarily driven by geographic location.
 
 
-(https://feiyingdai.github.io/nlp-sna-yelp-analysis/folium-2.html)
+**[Click here to explore the interactive heatmap visualization](https://feiyingdai.github.io/nlp-sna-yelp-analysis/folium-2.html)**
 
 ### 3.2 User Overview
 To understand user engagement and the impact of Yelp’s elite user program, we analyze both **active users** and **elite users**:
@@ -133,7 +133,7 @@ To understand user engagement and the impact of Yelp’s elite user program, we 
 - **Active users** are defined as users who have posted at least one review, based on the `reviews` table (`user_id` appearing in reviews).
 - **Elite users** are identified from the `user` table's `elite` column, where we split multi-year values to determine elite status by year.
 
-#### Active vs Elite Users by Year
+#### 3.2.1 Active vs Elite Users by Year
 - From 2004 to 2017, both active and elite user counts increased significantly.
 - Active users grew exponentially, reaching over **450,000** by 2017.
 - Elite users increased steadily, but much more selectively — around **35,000** by 2017.
@@ -141,7 +141,7 @@ To understand user engagement and the impact of Yelp’s elite user program, we 
 
 <img width="1214" height="581" alt="image" src="https://github.com/user-attachments/assets/7eab642a-0370-4b94-871e-19390896d3e9" />
 
-#### Year-over-Year Retention Rate
+#### 3.2.2 Year-over-Year Retention Rate
 - **Elite users** consistently show high retention rates (>80%), indicating strong platform loyalty.
 - **All users** display a much lower retention rate (~30%), suggesting that most users are casual participants.
 - This gap underscores the importance of elite users in sustaining high-quality, ongoing engagement.
@@ -149,7 +149,7 @@ To understand user engagement and the impact of Yelp’s elite user program, we 
 <img width="1188" height="580" alt="image" src="https://github.com/user-attachments/assets/f5e514f3-cc84-4c59-a62a-dd9563e6e67a" />
 
 
-#### Elite vs Non-Elite User Behavior Comparison
+#### 3.2.3 Elite vs Non-Elite User Behavior Comparison
 
 - **Elite users** are far more active and socially recognized:
   - They contribute **many more reviews** and attract **significantly more fans**.
@@ -169,7 +169,7 @@ To understand user engagement and the impact of Yelp’s elite user program, we 
 ### 3.3 Review Overview
 We randomly sampled 100,000 reviews to explore patterns in user review behavior. The analysis yielded the following key insights:
 
-#### Review Frequency
+#### 3.3.1 Review Frequency
 Most users are infrequent reviewers.
 As shown in the left plot, the distribution of reviews per user is highly right-skewed.
 Over 80% of users wrote only 1 review, indicating that the majority of Yelp users are one-time contributors.
@@ -178,7 +178,7 @@ The cumulative distribution (right plot) confirms this, with nearly all users ha
 <img width="1280" height="594" alt="image" src="https://github.com/user-attachments/assets/90544e43-4eae-426b-895e-04ce80d0452f" />
 
 
-#### Review Usefulness
+#### 3.3.2 Review Usefulness
 
 We analyzed how the number of "useful" votes a user receives correlates with their behavior:
 
@@ -189,7 +189,7 @@ Fewer reviews overall — suggesting that more thoughtful reviewers post less fr
 
 <img width="1462" height="375" alt="image" src="https://github.com/user-attachments/assets/a2a8cd74-016b-44cb-a2d4-5d473df6181f" />
 
-#### Review Funny 
+#### 3.3.3 Review Funny 
 
 We also examined patterns among users who receive more "funny" votes:
 
