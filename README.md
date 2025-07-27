@@ -280,15 +280,93 @@ We built a **bigram network** using NLTK and NetworkX by:
   - "korean bbq"
 - These insights are useful for **customer experience optimization** and **marketing strategy**.
 
+## 5. Social Network Analysis
+
+This section explores the user interaction network in Stuttgart, constructed from Yelp review data. We model the social graph, analyze its structure, and perform community detection using the Louvain algorithm. After removing disconnected users, the analysis focuses on a **core active network** of engaged users. This filtered subgraph enables:
+  - More accurate **community detection**
+  - Simulations of **information diffusion** and **topic propagation**
+
+### 5.1 Network Structure Analysis
+
+#### 5.1.1 Graph Density
+
+- The network density is **0.0569**, which indicates a sparse network where most users are not directly connected.
+- This suggests that:
+  - Most Yelp users are **active in isolation**, posting reviews without forming connections.
+  - Yelp’s platform is **content-driven** rather than socially driven.
+
+**Insight:**  
+If Yelp aims to boost user retention and engagement, it could explore features that promote social interaction, such as:
+- Friend recommendations
+- Local user groups or events
+
+#### 5.1.2 Average Degree
+
+- The average degree is **15.65**, meaning each user (in the influencer subgraph) is connected to ~15 others.
+- This reflects **highly active social users**, likely frequent reviewers or community leaders.
+
+**Insight:**  
+These users are valuable for:
+- **User growth initiatives** (e.g., referral programs)
+- **Brand partnerships**
+- **Recommendation engine improvements** (based on their reviews)
+
+#### 5.1.3 Degree Centrality & Influencer Identification
+
+- We used `degree_centrality` and `heapq.nlargest` to identify the **top 500 most connected users**.
+- These users:
+  - Bridge multiple communities
+  - Are likely prolific reviewers, friends with many users, and write useful content
+
+**Insight:**  
+These individuals can serve as **word-of-mouth influencers**. Yelp may consider:
+- Including them in the **Yelp Elite Squad**
+- Offering them perks like coupons, early access, or invites to events
+
+<img width="1137" height="826" alt="image" src="https://github.com/user-attachments/assets/62ae97de-dc9e-4770-a86c-e2d638f11d1a" />
+
+#### Top 10 Influencers by Degree Centrality
+These users have the highest number of connections in the Stuttgart user network and are likely to have strong influence across multiple communities.
+
+| Rank | User ID                          | Number of Connections |
+|------|----------------------------------|------------------------|
+| 1    | L4LYCnLj2DySKILVvAbmxQ           | 73                     |
+| 2    | TcsaJM56vsQuE8wzq_jFqw           | 73                     |
+| 3    | rXvsM4vsvrhmLKXul0HRQg           | 72                     |
+| 4    | CIi0UKyKWjjcyuWfchFNWg           | 58                     |
+| 5    | BFLXmLtblVt8JaSFk_kb1A           | 56                     |
+| 6    | OGXaxh9Qg9HQS1Npk1h2t9           | 55                     |
+| 7    | 0pgXpWmpy6vAOqvs_TMhaA           | 54                     |
+| 8    | izoKblvdpxcDkoEPAKJ7GQ           | 52                     |
+| 9    | izoKblvdpxcDkoEPAKJ7GQ           | 52                     |
+| 10   | u2M3pJLXJwSmHBabnRSFyw           | 50                     |
 
 
+### 5.2 Louvain Community Detection
 
-## 5. Social Network Analysis (SNA)
-### 5.1 User Friendship Network
-- 构建 Yelp 用户好友图，分析节点度、影响者识别
+We applied the Louvain algorithm to detect community structures in the graph.
 
-### 5.2 Community Detection with Louvain Algorithm
-- Louvain 方法划分社区，输出社区结构、可视化及模块度分析
+1. **Detected 7 Communities**
+   - Indicates clear social clustering among Yelp users
+   - Clusters may form based on:
+     - Geographic proximity
+     - Shared interests
+     - Favorite types of businesses
+
+2. **Balanced Community Size**
+   - Largest community: 62 users (~22.5%)
+   - Smallest community: 30 users (~10.9%)
+   - The network exhibits a **multi-centered structure** with no dominant group
+
+3. **Modularity Score: 0.255**
+   - Indicates a **moderate level of community structure**
+   - While not highly modular (> 0.4 is considered strong), it still reflects meaningful social divisions
+
+**Insight:**  
+Community detection results can help Yelp:
+- Personalize content and review feeds
+- Understand regional or niche-based user behavior
+- Design localized promotions and campaigns
 
 ## 6. Strategic Insights
 结合情绪分析与社交网络，提出潜在商业建议，如：
